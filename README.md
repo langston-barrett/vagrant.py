@@ -1,4 +1,6 @@
-# vagrant.py
+# vagrant.py 
+
+[![Build Status](https://travis-ci.org/siddharthist/vagrant.py.svg?branch=master)](https://travis-ci.org/siddharthist/vagrant.py)
 
 **Table of Contents**
 - [vagrant.py](#vagrantpy)
