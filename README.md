@@ -5,8 +5,8 @@
     - [Disclaimer](#disclaimer)
     - [Installation](#installation)
     - [Usage](#usage)
+    - [Variables](#variables)
     - [Gotchas](#gotchas)
-    - [License](#license)
 
 `vagrant.py` is a dynamic Ansible inventory script to connect to systems by
 reading the output of Vagrant's `vagrant ssh-config` command.
@@ -33,7 +33,6 @@ instance, to use this to test if your servers are working:
 ```bash
 ansible all -m ping -i vagrant.py
 ```
-
 Or in a playbook:
 ```bash
 ansible-playbook -i vagrant.py your_playbook.yml
@@ -52,10 +51,10 @@ vagrant.py fills in some helpful Ansible variables for each host:
  * ansible\_ssh\_host - each VM's IP address or hostname
  * ansible\_ssh\_port - each VM's preferred SSH port
 
-## Mantl-specific variables
+### Mantl-specific variables
 
-As this project was developed for use with [Mantl](http://mantl.io/), it
-attaches a few extra host variables which you can safely use or ignore. They
+As this project was initially developed for use with [Mantl](http://mantl.io/),
+it attaches a few extra host variables which you can safely use or ignore. They
 are:
  * public\_ipv4 - each VM's IP address
  * private\_ipv4 - each VM's IP address
