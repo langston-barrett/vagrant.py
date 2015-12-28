@@ -117,7 +117,7 @@ class TestInventoryFunctions(unittest.TestCase):
         self.assertEqual(expected, vagrant.mantl_hostvars(mantl_worker_dict))
 
     def test_ssh_config_output(self):
-        with self.assertRaises(SystemExit):
+        with self.assertRaises(Exception):
             path = os.path.dirname(os.path.abspath(__file__))
             vagrant.ssh_config_output(path)
 
